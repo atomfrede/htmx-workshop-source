@@ -1,0 +1,3 @@
+# HTMX Workshop Source Code
+
+This is the sample code for my https://javascript-days.de/html-css/html-als-hypertext/[HTMX workshop at HTML/CSS/JS Days in Berlin], Oct. 2022.
