@@ -1,6 +1,6 @@
-package com.gitlab.atomfrede.todomvc.thymeleaf.todo_item.web;
+package com.github.atomfrede.htmx_workshop.todo_item.web;
 
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.*;
 
 public class TodoItemFormData {
 

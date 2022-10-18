@@ -1,7 +1,7 @@
-package com.gitlab.atomfrede.todomvc.thymeleaf;
+package com.github.atomfrede.htmx_workshop;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.*;
+import org.springframework.boot.autoconfigure.*;
 
 @SpringBootApplication
 public class TodoMvcApplication {

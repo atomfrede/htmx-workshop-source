@@ -1,10 +1,8 @@
-package com.gitlab.atomfrede.todomvc.thymeleaf.todo_item;
+package com.github.atomfrede.htmx_workshop.todo_item;
 
-import com.gitlab.atomfrede.todomvc.thymeleaf.todo_item.web.TodoItemController;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.NoRepositoryBean;
+import org.springframework.data.repository.*;
 
-import java.util.List;
+import java.util.*;
 
 
 @NoRepositoryBean

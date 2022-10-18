@@ -1,7 +1,7 @@
-package com.gitlab.atomfrede.todomvc.thymeleaf.todo_item;
+package com.github.atomfrede.htmx_workshop.todo_item;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
 
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class TodoItemNotFoundException extends RuntimeException{

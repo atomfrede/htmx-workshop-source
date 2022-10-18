@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.4'
+    id 'io.spring.dependency-management' version '1.0.13.RELEASE'
+}
+
+group = 'com.github.atomfrede.htmx-workshop'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+        vendor = JvmVendorSpec.ADOPTIUM
+    }
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+    systemProperties([
+            // Configuration parameters to execute top-level classes in parallel but methods in same thread
+            'junit.jupiter.execution.parallel.enabled': 'true',
+            'junit.jupiter.execution.parallel.mode.default': 'same_thread',
+            'junit.jupiter.execution.parallel.mode.classes.default': 'concurrent',
+            'junit.jupiter.execution.parallel.config.strategy': 'dynamic',
+            'junit.jupiter.execution.parallel.config.dynamic.factor': '0.5'
+    ])
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-thymeleaf"
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation "org.springframework.boot:spring-boot-starter-validation"
+    implementation "org.springframework.data:spring-data-commons"
+    developmentOnly "org.springframework.boot:spring-boot-devtools"
+    implementation "org.webjars:webjars-locator:0.45"
+    implementation "org.webjars.npm:todomvc-common:1.0.5"
+    implementation "org.webjars.npm:todomvc-app-css:2.4.1"
+    implementation "org.webjars.npm:htmx.org:1.8.2"
+    implementation "io.github.wimdeblauwe:htmx-spring-boot-thymeleaf:0.2.0"
+    testImplementation "com.microsoft.playwright:playwright:1.26.1"
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+}

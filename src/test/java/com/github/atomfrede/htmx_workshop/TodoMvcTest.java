@@ -1,8 +1,8 @@
-package com.gitlab.atomfrede.todomvc.htmxplaywright;
+package com.github.atomfrede.htmx_workshop;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.web.server.LocalServerPort;
+import org.junit.jupiter.api.*;
+import org.springframework.boot.test.context.*;
+import org.springframework.boot.test.web.server.*;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class TodoMvcTest extends PlaywrightSetup{
@@ -17,8 +17,8 @@ public class TodoMvcTest extends PlaywrightSetup{
     @Test
     void shouldAddNewTodo() {
         page.navigate(baseUrl());
-        page.locator("#new-todo-input").fill("htmx");
-        page.locator("#new-todo-input").press("Enter");
+        page.locator("[data-test=new-todo-input]").fill("htmx");
+        page.locator("[data-test=new-todo-input]").press("Enter");
         page.waitForSelector("#list-item-10");
     }
 }

@@ -1,18 +1,14 @@
-package com.gitlab.atomfrede.todomvc.thymeleaf.todo_item;
+package com.github.atomfrede.htmx_workshop.todo_item;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import java.util.*;
+import java.util.stream.*;
 
 @Repository
 public class TodoItemInMemoryRepository implements TodoItemRepository {
 
-    private Map<Long, TodoItem> todoItems = new HashMap<>();
+    private final Map<Long, TodoItem> todoItems = new HashMap<>();
 
     @Override
     public long nextId() {

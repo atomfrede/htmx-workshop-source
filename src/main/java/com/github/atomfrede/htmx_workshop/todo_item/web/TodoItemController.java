@@ -1,22 +1,12 @@
-package com.gitlab.atomfrede.todomvc.thymeleaf.todo_item.web;
+package com.github.atomfrede.htmx_workshop.todo_item.web;
 
-import com.gitlab.atomfrede.todomvc.thymeleaf.todo_item.TodoItem;
-import com.gitlab.atomfrede.todomvc.thymeleaf.todo_item.TodoItemNotFoundException;
-import com.gitlab.atomfrede.todomvc.thymeleaf.todo_item.TodoItemRepository;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.github.atomfrede.htmx_workshop.todo_item.*;
+import org.springframework.stereotype.*;
+import org.springframework.ui.*;
+import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+import javax.validation.*;
+import java.util.*;
 
 @Controller
 @RequestMapping("/")

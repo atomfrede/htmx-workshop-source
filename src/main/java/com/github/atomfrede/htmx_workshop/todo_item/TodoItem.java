@@ -1,4 +1,4 @@
-package com.gitlab.atomfrede.todomvc.thymeleaf.todo_item;
+package com.github.atomfrede.htmx_workshop.todo_item;
 
 public class TodoItem {
 
