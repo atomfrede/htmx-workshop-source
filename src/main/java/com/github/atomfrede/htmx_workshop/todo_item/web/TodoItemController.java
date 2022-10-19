@@ -115,6 +115,12 @@ public class TodoItemController {
         return repository.countAllByCompleted(true);
     }
 
+    private TodoItemDto toDto(TodoItem todoItem) {
+        return new TodoItemDto(todoItem.getId(),
+                todoItem.getTitle(),
+                todoItem.isCompleted());
+    }
+
     public static record TodoItemDto(long id, String title, boolean completed) {
     }
 
