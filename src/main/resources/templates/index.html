@@ -13,19 +13,19 @@
 <section class="todoapp">
     <header class="header">
         <h1>todos</h1>
-        <form th:action="@{/}" method="post" th:object="${item}">
-            <input class="new-todo" data-test="new-todo-input" placeholder="What needs to be done?" autofocus
+        <form id="new-todo-form" th:action="@{/}" method="post" th:object="${item}">
+            <input class="new-todo" id="new-todo-input" data-test="new-todo-input" placeholder="What needs to be done?" autofocus
                    th:field="*{title}">
         </form>
     </header>
     <!-- This section should be hidden by default and shown when there are todos -->
-    <section class="main" th:classappend="${totalNumberOfItems == 0?'hidden':''}">
+    <section class="main" id="main-section" th:classappend="${totalNumberOfItems == 0?'hidden':''}">
         <form th:action="@{/toggle-all}" th:method="put">
             <input id="toggle-all" class="toggle-all" type="checkbox"
                    onclick="this.form.submit()">
             <label for="toggle-all">Mark all as complete</label>
         </form>
-        <ul class="todo-list" th:remove="all-but-first">
+        <ul id="todo-list" class="todo-list" th:remove="all-but-first">
             <li th:insert="fragments :: todoItem(${item})" th:each="item : ${todos}" th:remove="tag">
             </li>
             <!-- These are here just to show the structure of the list items -->
@@ -49,7 +49,7 @@
         </ul>
     </section>
     <!-- This footer should be hidden by default and shown when there are todos -->
-    <footer class="footer" th:classappend="${totalNumberOfItems == 0?'hidden':''}">
+    <footer class="footer" id="main-footer" th:classappend="${totalNumberOfItems == 0?'hidden':''}">
         <!-- This should be `0 items left` by default -->
         <span th:insert="fragments :: active-items-count"></span>
         <ul class="filters">
@@ -81,7 +81,9 @@
     <p>Created by <a href="http://todomvc.com">you</a></p>
     <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 </footer>
+<script type="text/javascript" th:src="@{/webjars/htmx.org/dist/htmx.min.js}"></script>
 <!-- Scripts here. Don't remove ↓ -->
+<script></script>
 <!--<script th:src="@{/webjars/todomvc-common/base.js}"></script>-->
 </body>
 </html>
