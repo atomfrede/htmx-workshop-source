@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.4'
+    id 'org.springframework.boot' version '2.7.5'
     id 'io.spring.dependency-management' version '1.0.13.RELEASE'
 }
 
@@ -44,6 +44,6 @@ dependencies {
     implementation "org.webjars.npm:todomvc-app-css:2.4.1"
     implementation "org.webjars.npm:htmx.org:1.8.2"
     implementation "io.github.wimdeblauwe:htmx-spring-boot-thymeleaf:0.2.0"
-    testImplementation "com.microsoft.playwright:playwright:1.26.1"
+    testImplementation "com.microsoft.playwright:playwright:1.27.1."
     testImplementation "org.springframework.boot:spring-boot-starter-test"
 }
